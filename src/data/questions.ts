@@ -133,5 +133,245 @@ export const questionBank: Question[] = [
     options: ["6", "8", "12", "13"],
     correctAnswer: "13",
     difficulty: "hard"
+  },
+  {
+    id: 16,
+    category: "Verbal Reasoning",
+    question: "What is the opposite of 'abundant'?",
+    options: ["Scarce", "Plenty", "Rich", "Full"],
+    correctAnswer: "Scarce",
+    difficulty: "easy"
+  },
+  {
+    id: 17,
+    category: "Numerical Reasoning",
+    question: "What is 25% of 80?",
+    options: ["15", "20", "25", "30"],
+    correctAnswer: "20",
+    difficulty: "easy"
+  },
+  {
+    id: 18,
+    category: "Pattern Recognition",
+    question: "Complete the pattern: O, T, T, F, F, S, S, ?",
+    options: ["E", "N", "S", "T"],
+    correctAnswer: "E",
+    difficulty: "hard"
+  },
+  {
+    id: 19,
+    category: "Logical Reasoning",
+    question: "All cats are mammals. Some mammals are dogs. Therefore:",
+    options: ["All cats are dogs", "Some cats are dogs", "No cats are dogs", "Cannot be determined"],
+    correctAnswer: "Cannot be determined",
+    difficulty: "medium"
+  },
+  {
+    id: 20,
+    category: "Spatial Reasoning",
+    question: "If you rotate a square 45 degrees, what shape do you see?",
+    options: ["Square", "Diamond", "Rectangle", "Circle"],
+    correctAnswer: "Diamond",
+    difficulty: "easy"
+  },
+  {
+    id: 21,
+    category: "Numerical Reasoning",
+    question: "If x + 5 = 12, what is x?",
+    options: ["5", "6", "7", "8"],
+    correctAnswer: "7",
+    difficulty: "easy"
+  },
+  {
+    id: 22,
+    category: "Verbal Reasoning",
+    question: "Which word best completes: 'Ocean is to Water as Desert is to ____'?",
+    options: ["Hot", "Sand", "Dry", "Cactus"],
+    correctAnswer: "Sand",
+    difficulty: "medium"
+  },
+  {
+    id: 23,
+    category: "Pattern Recognition",
+    question: "What comes next: 100, 50, 25, 12.5, ?",
+    options: ["6", "6.25", "5", "7.5"],
+    correctAnswer: "6.25",
+    difficulty: "medium"
+  },
+  {
+    id: 24,
+    category: "Logical Reasoning",
+    question: "If the day before yesterday was Thursday, what day is tomorrow?",
+    options: ["Sunday", "Monday", "Tuesday", "Wednesday"],
+    correctAnswer: "Sunday",
+    difficulty: "medium"
+  },
+  {
+    id: 25,
+    category: "Numerical Reasoning",
+    question: "A rectangle has a length of 8cm and width of 6cm. What is its area?",
+    options: ["14 cm²", "28 cm²", "48 cm²", "56 cm²"],
+    correctAnswer: "48 cm²",
+    difficulty: "easy"
+  },
+  {
+    id: 26,
+    category: "Spatial Reasoning",
+    question: "How many faces does a cube have?",
+    options: ["4", "6", "8", "12"],
+    correctAnswer: "6",
+    difficulty: "easy"
+  },
+  {
+    id: 27,
+    category: "Verbal Reasoning",
+    question: "Which word does NOT belong: Happy, Joyful, Sad, Cheerful?",
+    options: ["Happy", "Joyful", "Sad", "Cheerful"],
+    correctAnswer: "Sad",
+    difficulty: "easy"
+  },
+  {
+    id: 28,
+    category: "Pattern Recognition",
+    question: "What number comes next: 3, 7, 15, 31, ?",
+    options: ["47", "63", "55", "71"],
+    correctAnswer: "63",
+    difficulty: "hard"
+  },
+  {
+    id: 29,
+    category: "Logical Reasoning",
+    question: "If all birds can fly and penguins are birds, but penguins cannot fly, what can we conclude?",
+    options: ["Penguins are not birds", "The first statement is false", "Penguins are exceptional", "All statements are true"],
+    correctAnswer: "The first statement is false",
+    difficulty: "hard"
+  },
+  {
+    id: 30,
+    category: "Numerical Reasoning",
+    question: "What is 3² + 4²?",
+    options: ["12", "25", "49", "144"],
+    correctAnswer: "25",
+    difficulty: "medium"
+  },
+  {
+    id: 31,
+    category: "Verbal Reasoning",
+    question: "Complete the sentence: 'As brave as a ____'",
+    options: ["Mouse", "Lion", "Rabbit", "Sheep"],
+    correctAnswer: "Lion",
+    difficulty: "easy"
+  },
+  {
+    id: 32,
+    category: "Spatial Reasoning",
+    question: "Which 2D shape has exactly 3 sides?",
+    options: ["Square", "Triangle", "Pentagon", "Circle"],
+    correctAnswer: "Triangle",
+    difficulty: "easy"
+  },
+  {
+    id: 33,
+    category: "Pattern Recognition",
+    question: "Complete the sequence: Z, Y, X, W, ?",
+    options: ["V", "U", "T", "S"],
+    correctAnswer: "V",
+    difficulty: "easy"
+  },
+  {
+    id: 34,
+    category: "Numerical Reasoning",
+    question: "If a pizza is cut into 8 equal slices and you eat 3 slices, what fraction remains?",
+    options: ["3/8", "5/8", "1/2", "2/3"],
+    correctAnswer: "5/8",
+    difficulty: "medium"
+  },
+  {
+    id: 35,
+    category: "Logical Reasoning",
+    question: "Tom is taller than Jerry. Jerry is taller than Mike. Who is the shortest?",
+    options: ["Tom", "Jerry", "Mike", "Cannot determine"],
+    correctAnswer: "Mike",
+    difficulty: "easy"
+  },
+  {
+    id: 36,
+    category: "Verbal Reasoning",
+    question: "What does 'procrastinate' mean?",
+    options: ["To hurry up", "To delay", "To complete", "To organize"],
+    correctAnswer: "To delay",
+    difficulty: "medium"
+  },
+  {
+    id: 37,
+    category: "Pattern Recognition",
+    question: "What comes next: Monday, Wednesday, Friday, ?",
+    options: ["Saturday", "Sunday", "Tuesday", "Thursday"],
+    correctAnswer: "Sunday",
+    difficulty: "medium"
+  },
+  {
+    id: 38,
+    category: "Numerical Reasoning",
+    question: "What is 144 ÷ 12?",
+    options: ["10", "11", "12", "13"],
+    correctAnswer: "12",
+    difficulty: "easy"
+  },
+  {
+    id: 39,
+    category: "Spatial Reasoning",
+    question: "How many edges does a triangular pyramid have?",
+    options: ["3", "4", "6", "9"],
+    correctAnswer: "6",
+    difficulty: "medium"
+  },
+  {
+    id: 40,
+    category: "Logical Reasoning",
+    question: "If you rearrange the letters 'LISTEN', you can form which word?",
+    options: ["SILENT", "ENLIST", "TINSEL", "All of the above"],
+    correctAnswer: "All of the above",
+    difficulty: "hard"
+  },
+  {
+    id: 41,
+    category: "Verbal Reasoning",
+    question: "Which word is most similar to 'enormous'?",
+    options: ["Tiny", "Huge", "Average", "Small"],
+    correctAnswer: "Huge",
+    difficulty: "easy"
+  },
+  {
+    id: 42,
+    category: "Pattern Recognition",
+    question: "What number is missing: 2, 6, 18, 54, ?",
+    options: ["108", "162", "216", "324"],
+    correctAnswer: "162",
+    difficulty: "medium"
+  },
+  {
+    id: 43,
+    category: "Numerical Reasoning",
+    question: "If a car travels 300 miles in 5 hours, what is its speed in miles per hour?",
+    options: ["50 mph", "55 mph", "60 mph", "65 mph"],
+    correctAnswer: "60 mph",
+    difficulty: "medium"
+  },
+  {
+    id: 44,
+    category: "Spatial Reasoning",
+    question: "Which shape cannot be folded into a cube?",
+    options: ["Cross shape", "T shape", "L shape", "All can be folded"],
+    correctAnswer: "L shape",
+    difficulty: "hard"
+  },
+  {
+    id: 45,
+    category: "Logical Reasoning",
+    question: "A farmer has 17 sheep. All but 9 die. How many are left?",
+    options: ["8", "9", "0", "17"],
+    correctAnswer: "9",
+    difficulty: "medium"
   }
 ];
