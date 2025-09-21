@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Card } from "@/components/ui/card";
-import { Clock, AlertCircle } from "lucide-react";
+import { Clock, AlertCircle, Brain } from "lucide-react";
 import { questionBank } from "@/data/questions";
 
 const TEST_DURATION = 10 * 60; // 10 minutes in seconds
@@ -82,9 +82,12 @@ const Test = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <h1 className="text-xl font-semibold">IQ Test</h1>
+              <div className="flex items-center gap-2">
+                <Brain className="w-6 h-6 text-primary" />
+                <h1 className="text-xl font-semibold">IQ Test</h1>
+              </div>
               <div className="text-sm text-muted-foreground">
-                Question {currentQuestion + 1} of {questionBank.length}
+                Vraag {currentQuestion + 1} van {questionBank.length}
               </div>
             </div>
             
@@ -101,7 +104,7 @@ const Test = () => {
               {timeLeft < 120 && (
                 <div className="flex items-center gap-1 text-warning text-sm">
                   <AlertCircle className="w-4 h-4" />
-                  <span>Running out of time!</span>
+                  <span>Tijd bijna op!</span>
                 </div>
               )}
             </div>
@@ -109,6 +112,9 @@ const Test = () => {
           
           <div className="mt-4">
             <Progress value={progress} className="h-2" />
+            <div className="text-xs text-muted-foreground mt-1 text-center">
+              {Math.round(progress)}% voltooid
+            </div>
           </div>
         </div>
       </div>
@@ -130,7 +136,7 @@ const Test = () => {
                   <div className="mb-6">
                     <img 
                       src={question.image} 
-                      alt="Question visual" 
+                      alt="Vraag afbeelding" 
                       className="mx-auto max-w-full h-auto rounded-lg shadow-md"
                     />
                   </div>
@@ -166,7 +172,7 @@ const Test = () => {
               
               <div className="flex justify-between items-center pt-6">
                 <div className="text-sm text-muted-foreground">
-                  No backtracking allowed once answered
+                  Terugkeren naar vorige vraag niet mogelijk
                 </div>
                 
                 <Button 
@@ -174,7 +180,7 @@ const Test = () => {
                   disabled={!selectedAnswer}
                   size="lg"
                 >
-                  {currentQuestion < questionBank.length - 1 ? 'Next Question' : 'Finish Test'}
+                  {currentQuestion < questionBank.length - 1 ? 'Volgende Vraag' : 'Test Afronden'}
                 </Button>
               </div>
             </div>

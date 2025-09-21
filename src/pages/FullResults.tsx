@@ -59,34 +59,34 @@ const FullResults = () => {
     // Generate cognitive breakdown
     const cognitiveScores: CognitiveScore[] = [
       {
-        area: "Verbal Reasoning",
+        area: "Verbaal Redeneren",
         score: finalScore + Math.floor(Math.random() * 20) - 10,
         percentile: percentile + Math.floor(Math.random() * 20) - 10,
-        description: "Understanding and using language effectively"
+        description: "Taal begrijpen en effectief gebruiken"
       },
       {
-        area: "Numerical Reasoning",
+        area: "Numeriek Redeneren",
         score: finalScore + Math.floor(Math.random() * 20) - 10,
         percentile: percentile + Math.floor(Math.random() * 20) - 10,
-        description: "Working with numbers and mathematical concepts"
+        description: "Werken met getallen en wiskundige concepten"
       },
       {
-        area: "Spatial Reasoning",
+        area: "Ruimtelijk Redeneren",
         score: finalScore + Math.floor(Math.random() * 20) - 10,
         percentile: percentile + Math.floor(Math.random() * 20) - 10,
-        description: "Visualizing and manipulating objects in space"
+        description: "Objecten in de ruimte visualiseren en manipuleren"
       },
       {
-        area: "Pattern Recognition",
+        area: "Patroonherkenning",
         score: finalScore + Math.floor(Math.random() * 20) - 10,
         percentile: percentile + Math.floor(Math.random() * 20) - 10,
-        description: "Identifying relationships and sequences"
+        description: "Relaties en volgorden identificeren"
       },
       {
-        area: "Logical Reasoning",
+        area: "Logisch Redeneren",
         score: finalScore + Math.floor(Math.random() * 20) - 10,
         percentile: percentile + Math.floor(Math.random() * 20) - 10,
-        description: "Analyzing arguments and drawing conclusions"
+        description: "Argumenten analyseren en conclusies trekken"
       }
     ];
 
@@ -106,13 +106,13 @@ const FullResults = () => {
 
   const handleDownloadCertificate = () => {
     toast({
-      title: "Certificate Downloaded",
-      description: "Your official IQ certificate has been downloaded as PDF.",
+      title: "Certificaat Gedownload",
+      description: "Je officiële IQ-certificaat is gedownload als PDF.",
     });
   };
 
   const handleShare = (platform: string) => {
-    const shareText = `I just completed an IQ test and scored ${testData?.iqScore}! Check out your cognitive abilities too.`;
+    const shareText = `Ik heb net een IQ-test gedaan en scoorde ${testData?.iqScore}! Test ook je cognitieve vaardigheden.`;
     const shareUrl = window.location.origin;
     
     let url = '';
@@ -129,8 +129,8 @@ const FullResults = () => {
       case 'copy':
         navigator.clipboard.writeText(`${shareText} ${shareUrl}`);
         toast({
-          title: "Link Copied",
-          description: "Share link copied to clipboard!",
+          title: "Link Gekopieerd",
+          description: "Deel-link gekopieerd naar klembord!",
         });
         return;
     }
@@ -145,19 +145,19 @@ const FullResults = () => {
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <Brain className="w-12 h-12 mx-auto text-muted-foreground mb-4" />
-          <p className="text-muted-foreground">Loading your results...</p>
+          <p className="text-muted-foreground">Je resultaten laden...</p>
         </div>
       </div>
     );
   }
 
   const getScoreCategory = (score: number) => {
-    if (score >= 130) return { label: "Very Superior", color: "text-purple-600" };
-    if (score >= 120) return { label: "Superior", color: "text-blue-600" };
-    if (score >= 110) return { label: "High Average", color: "text-green-600" };
-    if (score >= 90) return { label: "Average", color: "text-yellow-600" };
-    if (score >= 80) return { label: "Low Average", color: "text-orange-600" };
-    return { label: "Below Average", color: "text-red-600" };
+    if (score >= 130) return { label: "Zeer Superieur", color: "text-purple-600" };
+    if (score >= 120) return { label: "Superieur", color: "text-blue-600" };
+    if (score >= 110) return { label: "Hoog Gemiddeld", color: "text-green-600" };
+    if (score >= 90) return { label: "Gemiddeld", color: "text-yellow-600" };
+    if (score >= 80) return { label: "Laag Gemiddeld", color: "text-orange-600" };
+    return { label: "Onder Gemiddeld", color: "text-red-600" };
   };
 
   const category = getScoreCategory(testData.iqScore);
@@ -175,23 +175,23 @@ const FullResults = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Your Complete IQ Analysis
+              Je Complete IQ-Analyse
             </h1>
             <p className="text-xl text-muted-foreground">
-              Comprehensive cognitive assessment results
+              Uitgebreide cognitieve beoordelingsresultaten
             </p>
           </div>
 
           {/* Main Score */}
           <Card className="p-8 mb-8 bg-hero-gradient text-white text-center shadow-glow">
-            <h2 className="text-2xl font-semibold mb-4">Your IQ Score</h2>
+            <h2 className="text-2xl font-semibold mb-4">Je IQ-Score</h2>
             <div className="text-7xl font-bold mb-4">{testData.iqScore}</div>
             <div className="space-y-2">
               <Badge className={`text-lg px-4 py-2 ${category.color} bg-white/20`}>
                 {category.label}
               </Badge>
               <p className="text-white/90">
-                You scored higher than {testData.percentile}% of the population
+                Je scoorde hoger dan {testData.percentile}% van de bevolking
               </p>
             </div>
           </Card>
@@ -202,12 +202,12 @@ const FullResults = () => {
               <Star className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold text-accent mb-2">
-                  🎯 Your Cognitive Strength
+                  🎯 Je Cognitieve Sterkte
                 </h3>
                 <p className="text-muted-foreground">
-                  Your strongest cognitive area is <strong>{testData.strongestArea}</strong>. 
-                  This suggests you excel at tasks requiring this type of thinking. 
-                  Consider careers or hobbies that leverage this natural ability.
+                  Je sterkste cognitieve gebied is <strong>{testData.strongestArea}</strong>. 
+                  Dit suggereert dat je uitblinkt in taken die dit type denken vereisen. 
+                  Overweeg carrières of hobby's die gebruik maken van deze natuurlijke vaardigheid.
                 </p>
               </div>
             </div>
@@ -217,7 +217,7 @@ const FullResults = () => {
           <Card className="p-6 mb-8">
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
               <Target className="w-5 h-5 text-primary" />
-              Cognitive Areas Breakdown
+              Uitsplitsing Cognitieve Gebieden
             </h3>
             
             <div className="space-y-6">
@@ -230,7 +230,7 @@ const FullResults = () => {
                     </div>
                     <div className="text-right">
                       <div className="text-lg font-bold text-primary">{area.score}</div>
-                      <div className="text-sm text-muted-foreground">{area.percentile}th percentile</div>
+                      <div className="text-sm text-muted-foreground">{area.percentile}e percentiel</div>
                     </div>
                   </div>
                   <Progress value={area.percentile} className="h-2" />
@@ -244,24 +244,24 @@ const FullResults = () => {
             <Card className="p-6">
               <h3 className="font-semibold mb-4 flex items-center gap-2">
                 <Download className="w-5 h-5 text-primary" />
-                Download Certificate
+                Download Certificaat
               </h3>
               <p className="text-muted-foreground mb-4 text-sm">
-                Get your official PDF certificate to share with employers or for personal records.
+                Krijg je officiële PDF-certificaat om te delen met werkgevers of voor persoonlijke administratie.
               </p>
               <Button onClick={handleDownloadCertificate} className="w-full">
                 <Download className="w-4 h-4" />
-                Download PDF Certificate
+                Download PDF-Certificaat
               </Button>
             </Card>
 
             <Card className="p-6">
               <h3 className="font-semibold mb-4 flex items-center gap-2">
                 <Share2 className="w-5 h-5 text-primary" />
-                Share Your Results
+                Deel Je Resultaten
               </h3>
               <p className="text-muted-foreground mb-4 text-sm">
-                Share your achievement with friends and professional networks.
+                Deel je prestatie met vrienden en professionele netwerken.
               </p>
               <div className="grid grid-cols-2 gap-2">
                 <Button 
@@ -294,7 +294,7 @@ const FullResults = () => {
                   onClick={() => handleShare('copy')}
                 >
                   <Copy className="w-4 h-4" />
-                  Copy Link
+                  Kopieer Link
                 </Button>
               </div>
             </Card>
@@ -305,13 +305,13 @@ const FullResults = () => {
             <Card className="p-6 mb-8 bg-accent/5 border-accent">
               <h3 className="font-semibold mb-4 flex items-center gap-2">
                 <TrendingUp className="w-5 h-5 text-accent" />
-                Your 30-Day Brain Training Plan
+                Je 30-Dagen Hersentraining Plan
               </h3>
               <p className="text-muted-foreground mb-4">
-                Based on your results, we've created a personalized training plan to enhance your cognitive abilities.
+                Gebaseerd op je resultaten hebben we een gepersonaliseerd trainingsplan gemaakt om je cognitieve vaardigheden te verbeteren.
               </p>
               <Button variant="accent">
-                Start Brain Training
+                Start Hersentraining
               </Button>
             </Card>
           )}
@@ -319,12 +319,12 @@ const FullResults = () => {
           {/* Footer */}
           <div className="text-center text-sm text-muted-foreground">
             <p>
-              This assessment provides an approximate measure of cognitive ability. 
-              Results are not intended for clinical diagnosis.
+              Deze beoordeling biedt een geschatte meting van cognitieve vaardigheden. 
+              Resultaten zijn niet bedoeld voor klinische diagnose.
             </p>
             <p className="mt-2">
-              Assessment completed on {new Date().toLocaleDateString()} | 
-              Valid certificate ID: IQ-{Date.now().toString().slice(-8).toUpperCase()}
+              Beoordeling voltooid op {new Date().toLocaleDateString('nl-NL')} | 
+              Geldig certificaat ID: IQ-{Date.now().toString().slice(-8).toUpperCase()}
             </p>
           </div>
         </div>

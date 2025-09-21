@@ -42,26 +42,26 @@ export const EmailCaptureModal = ({ open, onOpenChange }: EmailCaptureModalProps
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2 text-xl">
             <Gift className="w-6 h-6 text-primary" />
-            Save Your Progress
+            Bewaar Je Voortgang
           </DialogTitle>
         </DialogHeader>
         
         <div className="space-y-6">
           <div className="text-center">
             <p className="text-muted-foreground">
-              Enter your email to save your progress and receive your detailed results
+              Voer je e-mailadres in om je voortgang op te slaan en je gedetailleerde resultaten te ontvangen
             </p>
           </div>
           
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">Email Address</Label>
+              <Label htmlFor="email">E-mailadres</Label>
               <div className="relative">
                 <Mail className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
                 <Input
                   id="email"
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="Voer je e-mailadres in"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="pl-10"
@@ -71,19 +71,19 @@ export const EmailCaptureModal = ({ open, onOpenChange }: EmailCaptureModalProps
             
             <div className="bg-accent/10 p-4 rounded-lg">
               <h4 className="font-semibold text-sm mb-2 text-accent">
-                What you'll get:
+                Wat je krijgt:
               </h4>
               <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• Progress automatically saved</li>
-                <li>• Results emailed instantly</li>
-                <li>• Exclusive bonus insights</li>
-                <li>• Limited-time discount on full report</li>
+                <li>• Voortgang automatisch opgeslagen</li>
+                <li>• Resultaten direct gemaild</li>
+                <li>• Exclusieve bonus inzichten</li>
+                <li>• Tijdelijke korting op volledig rapport</li>
               </ul>
             </div>
             
             <div className="flex flex-col gap-3">
               <Button type="submit" size="lg" disabled={isLoading || !email}>
-                {isLoading ? "Saving..." : "Continue with Email"}
+                {isLoading ? "Opslaan..." : "Doorgaan met E-mail"}
               </Button>
               <Button 
                 type="button" 
@@ -91,13 +91,13 @@ export const EmailCaptureModal = ({ open, onOpenChange }: EmailCaptureModalProps
                 onClick={handleSkip}
                 className="text-muted-foreground"
               >
-                Skip for now
+                Nu overslaan
               </Button>
             </div>
           </form>
           
           <p className="text-xs text-muted-foreground text-center">
-            We respect your privacy. Unsubscribe anytime.
+            We respecteren je privacy. Uitschrijven kan altijd.
           </p>
         </div>
       </DialogContent>

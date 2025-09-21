@@ -49,7 +49,7 @@ const Results = () => {
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <Brain className="w-12 h-12 mx-auto text-muted-foreground mb-4" />
-          <p className="text-muted-foreground">Loading your results...</p>
+          <p className="text-muted-foreground">Je resultaten laden...</p>
         </div>
       </div>
     );
@@ -68,10 +68,10 @@ const Results = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Test Complete! 🎉
+              Test Voltooid! 🎉
             </h1>
             <p className="text-xl text-muted-foreground">
-              You've successfully completed the IQ assessment
+              Je hebt de IQ-beoordeling succesvol afgerond
             </p>
           </div>
 
@@ -82,7 +82,7 @@ const Results = () => {
                 {testData.answersCount}
               </div>
               <div className="text-sm text-muted-foreground">
-                Questions Answered
+                Vragen Beantwoord
               </div>
             </Card>
             
@@ -91,7 +91,7 @@ const Results = () => {
                 {Math.floor(testData.timeSpent / 60)}m {testData.timeSpent % 60}s
               </div>
               <div className="text-sm text-muted-foreground">
-                Time Spent
+                Bestede Tijd
               </div>
             </Card>
             
@@ -100,7 +100,7 @@ const Results = () => {
                 🧠
               </div>
               <div className="text-sm text-muted-foreground">
-                Cognitive Areas Tested
+                Cognitieve Gebieden Getest
               </div>
             </Card>
           </div>
@@ -108,7 +108,7 @@ const Results = () => {
           {/* Teaser Results */}
           <Card className="p-8 mb-8 bg-card-gradient shadow-elegant">
             <div className="text-center">
-              <h2 className="text-2xl font-bold mb-4">Your IQ Assessment is Ready!</h2>
+              <h2 className="text-2xl font-bold mb-4">Je IQ-Beoordeling is Klaar!</h2>
               
               <div className="relative mb-6">
                 <div className="text-6xl font-bold text-muted-foreground/30 mb-2">
@@ -118,31 +118,31 @@ const Results = () => {
                   <div className="bg-background/90 backdrop-blur-sm p-4 rounded-lg border-2 border-dashed border-muted-foreground/30">
                     <Lock className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
                     <div className="text-sm text-muted-foreground">
-                      Unlock for exact score
+                      Ontgrendel voor exacte score
                     </div>
                   </div>
                 </div>
               </div>
               
               <p className="text-muted-foreground mb-6">
-                *Estimated range based on completion time and response patterns
+                *Geschat bereik gebaseerd op voltooiingstijd en antwoordpatronen
               </p>
               
               <div className="space-y-3 mb-6">
                 <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-                  <span>📊 Detailed score breakdown</span>
+                  <span>📊 Gedetailleerde score-uitsplitsing</span>
                   <Lock className="w-4 h-4 text-muted-foreground" />
                 </div>
                 <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-                  <span>🎯 Cognitive strengths analysis</span>
+                  <span>🎯 Cognitieve sterke punten analyse</span>
                   <Lock className="w-4 h-4 text-muted-foreground" />
                 </div>
                 <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-                  <span>📜 Official PDF certificate</span>
+                  <span>📜 Officieel PDF-certificaat</span>
                   <Lock className="w-4 h-4 text-muted-foreground" />
                 </div>
                 <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
-                  <span>📈 Percentile ranking</span>
+                  <span>📈 Percentiel rangschikking</span>
                   <Lock className="w-4 h-4 text-muted-foreground" />
                 </div>
               </div>
@@ -155,12 +155,12 @@ const Results = () => {
               <Star className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
               <div className="text-left">
                 <h3 className="font-semibold text-accent mb-2">
-                  Preview: Your Strongest Area
+                  Voorproefje: Je Sterkste Gebied
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Based on your response patterns, you show strong aptitude in 
-                  <Badge variant="secondary" className="mx-1">pattern recognition</Badge>
-                  tasks. Unlock your full report to see detailed analysis across all cognitive domains.
+                  Gebaseerd op je antwoordpatronen toon je sterke aanleg voor 
+                  <Badge variant="secondary" className="mx-1">patroonherkenning</Badge>
+                  taken. Ontgrendel je volledige rapport voor gedetailleerde analyse van alle cognitieve domeinen.
                 </p>
               </div>
             </div>
@@ -175,12 +175,12 @@ const Results = () => {
               className="min-w-[280px]"
             >
               <Award className="w-5 h-5" />
-              Unlock Full Results
+              Ontgrendel Volledige Resultaten
               <ArrowRight className="w-5 h-5" />
             </Button>
             
             <p className="text-sm text-muted-foreground">
-              Get your exact IQ score, detailed breakdown, and official certificate
+              Krijg je exacte IQ-score, gedetailleerde uitsplitsing en officieel certificaat
             </p>
           </div>
         </div>

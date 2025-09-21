@@ -15,42 +15,42 @@ interface PaywallModalProps {
 const pricingPlans = [
   {
     id: "basic",
-    name: "Instant Score",
+    name: "Directe Score",
     price: "€4.99",
     icon: Zap,
     popular: false,
     features: [
-      "Exact IQ Score",
-      "Basic percentile ranking",
-      "Instant access"
+      "Exacte IQ-Score",
+      "Basis percentiel rangschikking",
+      "Directe toegang"
     ]
   },
   {
     id: "premium",
-    name: "Full Report",
+    name: "Volledig Rapport",
     price: "€9.99",
     icon: Award,
     popular: true,
     features: [
-      "Everything in Instant Score",
-      "Detailed cognitive breakdown",
-      "Downloadable PDF certificate",
-      "Strengths & improvement areas",
-      "Shareable results"
+      "Alles van Directe Score",
+      "Gedetailleerde cognitieve uitsplitsing",
+      "Downloadbaar PDF-certificaat",
+      "Sterke punten & verbeterpunten",
+      "Deelbare resultaten"
     ]
   },
   {
     id: "ultimate",
-    name: "Report + Training",
+    name: "Rapport + Training",
     price: "€14.99",
     icon: Crown,
     popular: false,
     features: [
-      "Everything in Full Report",
-      "30-day brain training access",
-      "Personalized training plan",
-      "Progress tracking",
-      "Monthly retests"
+      "Alles van Volledig Rapport",
+      "30-dagen hersentraining toegang",
+      "Gepersonaliseerd trainingsplan",
+      "Voortgang bijhouden",
+      "Maandelijkse hertests"
     ]
   }
 ];
@@ -80,33 +80,33 @@ export const PaywallModal = ({ open, onOpenChange, estimatedScore }: PaywallModa
       <DialogContent className="sm:max-w-4xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-center text-2xl font-bold">
-            Unlock Your Complete IQ Analysis
+            Ontgrendel Je Complete IQ-Analyse
           </DialogTitle>
           <p className="text-center text-muted-foreground mt-2">
-            Your estimated score: <span className="font-semibold text-primary">{estimatedScore}+</span> - Get your exact results now
+            Je geschatte score: <span className="font-semibold text-primary">{estimatedScore}+</span> - Krijg nu je exacte resultaten
           </p>
         </DialogHeader>
         
         <div className="space-y-6">
           {/* Why Pay Section */}
           <Card className="p-4 bg-accent/5 border-accent/20">
-            <h3 className="font-semibold text-accent mb-3">Why unlock your results?</h3>
+            <h3 className="font-semibold text-accent mb-3">Waarom je resultaten ontgrendelen?</h3>
             <div className="grid sm:grid-cols-2 gap-2 text-sm">
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-accent" />
-                <span>Scientifically validated scoring</span>
+                <span>Wetenschappelijk gevalideerde scoring</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-accent" />
-                <span>Professional-grade analysis</span>
+                <span>Professionele analyse</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-accent" />
-                <span>Detailed cognitive insights</span>
+                <span>Gedetailleerde cognitieve inzichten</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-accent" />
-                <span>Official certification</span>
+                <span>Officiële certificering</span>
               </div>
             </div>
           </Card>
@@ -130,7 +130,7 @@ export const PaywallModal = ({ open, onOpenChange, estimatedScore }: PaywallModa
                   {plan.popular && (
                     <Badge className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-accent text-accent-foreground">
                       <Star className="w-3 h-3 mr-1" />
-                      Most Popular
+                      Meest Populair
                     </Badge>
                   )}
                   
@@ -164,14 +164,14 @@ export const PaywallModal = ({ open, onOpenChange, estimatedScore }: PaywallModa
 
           {/* Sample Certificate Preview */}
           <Card className="p-4 bg-muted/30">
-            <h4 className="font-semibold mb-3 text-center">Sample Certificate Preview</h4>
+            <h4 className="font-semibold mb-3 text-center">Voorbeeld Certificaat Voorvertoning</h4>
             <div className="bg-white border border-muted rounded-lg p-6 text-center shadow-sm">
-              <div className="text-lg font-bold mb-2">Official IQ Assessment Certificate</div>
+              <div className="text-lg font-bold mb-2">Officieel IQ-Beoordelings Certificaat</div>
               <div className="text-sm text-muted-foreground mb-4">
-                This certifies that [Your Name] has completed a comprehensive IQ assessment
+                Dit certificeert dat [Jouw Naam] een uitgebreide IQ-beoordeling heeft voltooid
               </div>
               <div className="text-3xl font-bold text-primary mb-2">Score: XXX</div>
-              <div className="text-sm">Percentile: XX% | Date: {new Date().toLocaleDateString()}</div>
+              <div className="text-sm">Percentiel: XX% | Datum: {new Date().toLocaleDateString('nl-NL')}</div>
             </div>
           </Card>
 
@@ -185,15 +185,15 @@ export const PaywallModal = ({ open, onOpenChange, estimatedScore }: PaywallModa
               className="w-full"
             >
               <CreditCard className="w-5 h-5" />
-              {isProcessing ? "Processing..." : `Unlock Now - ${pricingPlans.find(p => p.id === selectedPlan)?.price}`}
+              {isProcessing ? "Verwerken..." : `Nu Ontgrendelen - ${pricingPlans.find(p => p.id === selectedPlan)?.price}`}
             </Button>
             
             <div className="text-center">
               <p className="text-xs text-muted-foreground">
-                Secure payment • 30-day money-back guarantee • Instant access
+                Veilige betaling • 30-dagen geld-terug-garantie • Directe toegang
               </p>
               <p className="text-xs text-muted-foreground mt-1">
-                Questions? This is an approximate measure, not a clinical diagnosis
+                Vragen? Dit is een geschatte meting, geen klinische diagnose
               </p>
             </div>
           </div>
